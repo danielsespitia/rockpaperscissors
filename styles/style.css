@@ -59,3 +59,7 @@ html {
 	top: 89.8%;
 	padding-left: 1030px;
 }
+
+#buttons {
+	filter: invert();
+}
