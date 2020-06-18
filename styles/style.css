@@ -25,18 +25,6 @@ html {
 	left: 28%;
 }
 
-#container {
-	display: grid;
-}
-
-#circle1 {
-	grid-area: 1/1;
-	background-color: red;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-}
-
 #paper {
 	padding-top: 200px;
 	position: absolute;
@@ -49,17 +37,25 @@ html {
 	left: 58%;
 }
 
-#player {
-	padding-top: 414px;
-	padding-left: 750px;
-}
-
-#pc {
-	position: absolute;
-	top: 89.8%;
-	padding-left: 1030px;
-}
+/*#players {
+	padding-top: 400px;
+}*/
 
 #buttons {
+	position: absolute;
+	top: 280px;
+	left: 31.5%;
 	filter: invert();
+	z-index: 0;
+}
+
+#rockb {
+}
+
+#paperb {
+	margin-left: 245px;
+}
+
+#scissorsb {
+	margin-left: 210px;
 }

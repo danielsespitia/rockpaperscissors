@@ -1,3 +1,8 @@
+const playerInput = "";
+const rock = document.querySelector('#rockb')
+const paper = document.querySelector('#paperb')
+const scissors = document.querySelector('#scissorsb')
+
 function computerPlay() {
   let num = Math.floor(Math.random() * 3);
   let chois = "";
@@ -12,18 +17,18 @@ function computerPlay() {
   return chois;
 }
 
-let playerInput = "scissors"; //cambiar por prompt("Type Rock, Paper or Scissors!")
-
-
-
 function playRound(playerSelection, computerSelection){
   let playerScore = 0;
   let computerScore = 0;
 
-  playerSelection = playerInput.toLowerCase();
-  computerSelection = computerPlay();
+console.log("esto es playerselection " + playerSelection)
+console.log("esto es computerselection " + computerSelection)
+  //playerSelection = playerSelection.toLowerCase();
+  console.log("esto es playerselection minus" + playerSelection)
+
+  //computerSelection = computerPlay();
     //console.log("computer selection is " + computerSelection + " and player selection is " + playerSelection);
-  let round = "";
+  let round = "defecto";
 
   if (playerSelection == "rock") {
     if (computerSelection == "rock") {
@@ -55,32 +60,41 @@ function playRound(playerSelection, computerSelection){
   return round;
 }
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let result = [];
-  let versus = "";
+rock.addEventListener("click", function() {
+    console.log("acabe de escoger roca 1");
 
-  for (let i = 0; result.length < 5; i++) {
-    let winOrLose = playRound().slice(0,9);
-    if (winOrLose == "You Win! ") {
-      playerScore++;
-      result.push(winOrLose);
-    }
-    else if (winOrLose == "You Lose!") {
-      computerScore++;
-      result.push(winOrLose);
-    }
-  console.log(winOrLose)
-  }
-  if (playerScore < computerScore) {
-    versus = "Computer won the game!"
-  } else if (computerScore < playerScore) {
-    versus = "You won the game!"
-  }
-  //console.log("playerscore is " + playerScore + " computerScore is " + computerScore)
-  console.log(result)
-  return versus;
+  let result = playRound("rock",computerPlay()) 
+  console.log("resultado "+result);
 }
+  );
+console.log(playRound())
 
-console.log(game())
+// function game() {
+//   let playerScore = 0;
+//   let computerScore = 0;
+//   let result = [];
+//   let versus = "";
+
+//   for (let i = 0; result.length < 5; i++) {
+//     let winOrLose = playRound().slice(0,9);
+//     if (winOrLose == "You Win! ") {
+//       playerScore++;
+//       result.push(winOrLose);
+//     }
+//     else if (winOrLose == "You Lose!") {
+//       computerScore++;
+//       result.push(winOrLose);
+//     }
+//   console.log(winOrLose)
+//   }
+//   if (playerScore < computerScore) {
+//     versus = "Computer won the game!"
+//   } else if (computerScore < playerScore) {
+//     versus = "You won the game!"
+//   }
+//   //console.log("playerscore is " + playerScore + " computerScore is " + computerScore)
+//   console.log(result)
+//   return versus;
+// }
+
+// console.log(game())
