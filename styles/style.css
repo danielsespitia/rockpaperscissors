@@ -3,6 +3,10 @@ html {
 	background-color: #235493;
 }
 
+#top {
+	filter: invert();
+}
+
 #titl {
 	text-align: center;
 }
@@ -37,15 +41,14 @@ html {
 	left: 58%;
 }
 
-/*#players {
-	padding-top: 400px;
-}*/
+#players {
+	filter: invert();
+}
 
 #buttons {
 	position: absolute;
 	top: 280px;
 	left: 31.5%;
-	filter: invert();
 	z-index: 0;
 }
 
