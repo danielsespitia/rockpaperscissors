@@ -1,7 +1,6 @@
 html {
 	font-family: Trebuchet MS,sans-serif;
 	background-color: #235493;
-	filter: invert();
 }
 
 #titl {
@@ -15,6 +14,7 @@ html {
 /*body*/
 
 #icons {
+	filter: invert();
 	grid-area: 1/1;
 	z-index: -1;
 }
