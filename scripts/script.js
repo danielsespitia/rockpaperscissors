@@ -71,12 +71,20 @@ function playRound(playerSelection, computerSelection) {
   alert("Computer chose: " + computerSelection + "\n" + round);
 
   if (playerScore == 3) {
-    alert("You win the game!");
+    alert("You won the game!");
+    playerScore = 0;
+    computerScore = 0;
+    player.innerHTML = "You: " + playerScore;
+    pc.innerHTML = "PC: " + computerScore;
   } else if (computerScore == 3) {
-    alert("The computer wins the game!");
+    alert("The computer won the game!");
+    playerScore = 0;
+    computerScore = 0;
+    player.innerHTML = "You: " + playerScore;
+    pc.innerHTML = "PC: " + computerScore;
   }
   
-  return round;
+  return [playerScore, computerScore];
 }
 
 //console.log("este es el final playerScore " + playerScore + " y este es el final computerScore " + computerScore);
